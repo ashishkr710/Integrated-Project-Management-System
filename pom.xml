@@ -51,7 +51,12 @@
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-<!--		<dependency>-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.2.5.Final</version>
+        </dependency>
+        <!--		<dependency>-->
 <!--			<groupId>org.springframework.boot</groupId>-->
 <!--			<artifactId>spring-boot-starter-test</artifactId>-->
 <!--			<scope>test</scope>-->
