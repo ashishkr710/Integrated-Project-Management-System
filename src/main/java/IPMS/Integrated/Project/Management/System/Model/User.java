@@ -25,5 +25,5 @@ public class User {
     @Email(message = "{error.invalid_email}")
     private String email;
 
-
+    private String password;
 }
