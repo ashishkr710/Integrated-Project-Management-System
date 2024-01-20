@@ -14,7 +14,7 @@ import java.util.Date;
 public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int projectId;
+    private Long projectId;
 
     @NotNull
     private String projectName;
@@ -24,4 +24,6 @@ public class Project {
     private Date endDate;
 
     private String description;
+
+
 }

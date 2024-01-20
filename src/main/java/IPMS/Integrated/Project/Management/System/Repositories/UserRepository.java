@@ -1,4 +1,7 @@
 package IPMS.Integrated.Project.Management.System.Repositories;
 
-public interface UserRepository {
+import IPMS.Integrated.Project.Management.System.Model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User,Long> {
 }

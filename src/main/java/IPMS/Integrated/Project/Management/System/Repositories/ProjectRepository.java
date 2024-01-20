@@ -1,4 +1,7 @@
 package IPMS.Integrated.Project.Management.System.Repositories;
 
-public interface ProjectRepository {
+import IPMS.Integrated.Project.Management.System.Model.Project;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProjectRepository extends JpaRepository<Project,Long> {
 }
