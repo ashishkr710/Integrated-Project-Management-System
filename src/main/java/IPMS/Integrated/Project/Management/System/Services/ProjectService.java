@@ -2,6 +2,7 @@ package IPMS.Integrated.Project.Management.System.Services;
 
 import IPMS.Integrated.Project.Management.System.Model.Project;
 import IPMS.Integrated.Project.Management.System.Repositories.ProjectRepository;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,13 +24,14 @@ public class ProjectService {
         return projectRepository.save(project);
     }
 
-//    public Project updateProject(Long projectId, Project updatedProject) {
-//        if (projectRepository.existsById(projectId)) {
-//            updatedProject.setProjectId(projectId);
-//            return projectRepository.save(updatedProject);
-//        }
-//        return null;
-//    }
+    public Project updateProject(Long projectId, Project updatedProject) {
+        return projectRepository.findById(projectId)
+                .map(existingProject -> {
+                    BeanUtils.copyProperties(updatedProject, existingProject, "projectId");
+                    return projectRepository.save(existingProject);
+                })
+                .orElse(null);
+    }
 
     public void deleteProject(Long projectId) {
         projectRepository.deleteById(projectId);
