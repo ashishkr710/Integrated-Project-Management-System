@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/api/projects")
 public class ProjectController {
 
-//    @Autowired
+    @Autowired
     private ProjectService projectService;
 
     @GetMapping
@@ -23,6 +23,7 @@ public class ProjectController {
         return ResponseEntity.ok(projects);
     }
 
+//    This is the URL for Colling Data - /api/projects/1
     @GetMapping("/{projectId}")
     public ResponseEntity<Project> getProjectById(@PathVariable Long projectId) {
         Project project = projectService.getProjectById(projectId);

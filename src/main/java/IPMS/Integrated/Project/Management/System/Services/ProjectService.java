@@ -3,9 +3,10 @@ package IPMS.Integrated.Project.Management.System.Services;
 import IPMS.Integrated.Project.Management.System.Model.Project;
 import IPMS.Integrated.Project.Management.System.Repositories.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class ProjectService {
     @Autowired
     private ProjectRepository projectRepository;
