@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/files")
 public class FileController {
-//    @Autowired
+    @Autowired
     private FileService fileService;
 
     @GetMapping

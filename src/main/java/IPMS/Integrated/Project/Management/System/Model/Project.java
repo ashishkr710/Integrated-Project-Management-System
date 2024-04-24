@@ -34,5 +34,9 @@ public class Project {
     @JsonManagedReference
     private List<Task> tasks;
 
+    public Project(Long projectId) {
+        this.projectId = projectId;
+    }
+
 
 }

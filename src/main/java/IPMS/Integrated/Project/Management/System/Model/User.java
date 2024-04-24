@@ -37,4 +37,8 @@ public class User {
 
     @NotNull
     private String role;
+
+    public User(Long userId) {
+        this.userId = userId;
+    }
 }
