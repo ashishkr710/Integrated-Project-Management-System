@@ -15,6 +15,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    //Jpa Socket Problem
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
