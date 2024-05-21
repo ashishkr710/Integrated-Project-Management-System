@@ -2,6 +2,7 @@ package IPMS.Integrated.Project.Management.System.Configration;
 
 import org.springframework.context.annotation.Configuration;
 
-//@Configuration
+@Configuration
 public class UserAuth {
+//    public static void redult;
 }
