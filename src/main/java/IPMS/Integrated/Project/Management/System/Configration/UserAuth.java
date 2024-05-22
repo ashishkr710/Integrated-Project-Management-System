@@ -4,5 +4,5 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class UserAuth {
-//    public static void redult;
+
 }
