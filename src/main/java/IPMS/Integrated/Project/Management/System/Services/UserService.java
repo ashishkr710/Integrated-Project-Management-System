@@ -1,6 +1,5 @@
 package IPMS.Integrated.Project.Management.System.Services;
 
-
 import IPMS.Integrated.Project.Management.System.Model.User;
 import IPMS.Integrated.Project.Management.System.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,14 +24,6 @@ public class UserService {
     public User createUser(User user) {
         return userRepository.save(user);
     }
-
-//    public User updateUser(Long userId, User updatedUser) {
-//        if (userRepository.existsById(userId)) {
-//            updatedUser.setUserId(userId);
-//            return userRepository.save(updatedUser);
-//        }
-//        return null;
-//    }
 
     public void deleteUser(Long userId) {
         userRepository.deleteById(userId);

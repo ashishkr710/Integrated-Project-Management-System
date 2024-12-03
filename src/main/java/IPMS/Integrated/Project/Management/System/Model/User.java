@@ -1,16 +1,10 @@
 package IPMS.Integrated.Project.Management.System.Model;
 
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-//import reactor.util.annotation.NonNull;
-
-import java.math.BigInteger;
-
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,11 +15,9 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
 
-
     @NotNull
     @Column(nullable = false)
-    private String UserName;
-
+    private String userName;
 
     @Column(nullable = false, unique = true)
     @NotNull
@@ -39,6 +31,46 @@ public class User {
     private String role;
 
     public User(Long userId) {
+    }
+
+    // Getters and Setters
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

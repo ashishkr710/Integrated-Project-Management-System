@@ -55,20 +55,6 @@ public class FileService {
             e.printStackTrace(); // For logging
             throw new IOException("Failed to upload file: " + e.getMessage());
         }
-//        // Save the file to the server
-//        byte[] bytes = file.getBytes();
-//        Path path = Paths.get(filePath);
-//        Files.write(path, bytes);
-
-//        // Create FileContent object
-//        File files = new File();
-//        files.setFileName(fileName);
-//        files.setFilePath(filePath);
-//        files.setProject(new Project(projectId)); // Assuming Project constructor with projectId
-//        files.setUser(new User(userId)); // Assuming User constructor with userId
-//        files.setTimestamp(new Date());
-
-//        return fileRepository.save(files);
     }
 
     public void deleteFile(Long fileId) {
