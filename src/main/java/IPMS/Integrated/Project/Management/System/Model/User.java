@@ -31,6 +31,7 @@ public class User {
     private String role;
 
     public User(Long userId) {
+        this.userId = userId;
     }
 
     // Getters and Setters
